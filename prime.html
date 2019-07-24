@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <h1>One to Hundred prime number</h1> 
+   <button onclick="myfunction()">click me to see the result</button>
+ <p id="demo"></p>
+ <script>
+     function myfunction()
+     {
+         var n=100;
+         var result=" ";
+         for(var i=1;i<=n;i++)
+         {
+           var isprime= true;
+         
+            for(var j=2;j<i;j++)
+            {
+                if(i%j==0)
+                {
+                    isprime=false;
+                    
+                    break;
+                }
+            }
+            if(isprime)
+            {
+result+= i+" ,";
+console.log(i);
+            }
+         }
+         document.getElementById("demo").innerText=result;
+     }
+ </script>
+</body>
+</html>

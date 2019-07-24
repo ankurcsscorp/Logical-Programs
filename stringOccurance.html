@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Count the Occurance of the string</h1>
+   <label>Please enter the string value</label>
+    <input type="text" id="inputarea">
+    <button onclick="fun()">click and see the result</button>
+    <p id="demo"></p>
+    <script>
+         function fun()
+        {
+        var inp= document.getElementById("inputarea").value;
+
+        var count=0;
+        var result= " ";
+        var totalLength=inp.length;
+       
+
+       
+        for(var i=0;i<totalLength;i++)
+        {
+for(var j=0;j<=i;j++)
+{
+    if(i==j && j<i)
+    {
+        break;
+    }
+    if(i==j)
+    {
+ count=count+1;
+    }
+    if(j==totalLength-1)
+    {
+        result+=inp+" occures at "+count+" <br>";
+    }
+}
+        }
+        document.getElementById("demo").innerHTML=result;
+      
+    }
+    </script>
+</body>
+</html>
